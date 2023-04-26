@@ -1,0 +1,130 @@
+.value {
+    padding: 3rem 0;
+    overflow-x: hidden;
+}
+
+.value .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+@media (max-width: 992px) {
+    .value .content {
+        flex-direction: column;
+    }
+}
+
+.left_side .img_frame img {
+    width: 450px;
+    border: .5rem solid rgb(232 232 232 / 93%);
+    -webkit-border-radius: 15rem 15rem 0 0;
+    -moz-border-radius: 15rem 15rem 0 0;
+    -ms-border-radius: 15rem 15rem 0 0;
+    -o-border-radius: 15rem 15rem 0 0;
+    border-radius: 15rem 15rem 0 0;
+}
+
+@media (max-width: 500px) {
+    .left_side .img_frame img {
+        width: 100%;
+    }
+}
+
+.right_side {
+    max-width: 700px;
+    color: #8c8b8b;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.right_side .title {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.right_side .title span:nth-child(1) {
+    color: orange;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.right_side .title span:nth-child(2) {
+    color: var(--primary);
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.right_side .title p:nth-child(3) {
+    max-width: 600px;
+}
+
+.accordion {
+    border: none;
+}
+
+.accordion_item {
+    background-color: white;
+    border: 1px solid #e5eeff;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: var(--shadow);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.accordion_heading .accordion_button {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    outline: none;
+}
+
+.accordion_heading .accordion_button .icon,
+.accordion_heading .accordion_button .arrow {
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--lightBlue);
+    color: var(--blue);
+    font-size: 1.2rem;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.accordion_heading .accordion_button .heading {
+    color: var(--primary);
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.accordion_panel {
+    padding: 2rem 0 0 0;
+    -webkit-animation: fadein .35s ease-in;
+    animation: fadein .35s ease-in;
+}
+
+.accordion_panel .detail {
+    font-size: .9rem;
+}
+
+@keyframes fadein{
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
